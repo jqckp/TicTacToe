@@ -6,7 +6,11 @@ public class TicTacToe
 
     public char[][] gameBoard = new char[ROWS][COLUMNS];
     
-       
+    
+    public void printGameBoard()
+    {
+        
+    }
 
        
 
