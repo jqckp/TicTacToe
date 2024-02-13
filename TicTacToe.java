@@ -9,6 +9,10 @@ public class TicTacToe
     public static char[][] gameBoard = new char[ROWS][COLUMNS];
 
     public Scanner moveCollector;
+
+    public int playerSelectedRow;
+
+    public int playerSelectedColumn;
     
     
     public void printGameBoard()
@@ -18,6 +22,7 @@ public class TicTacToe
 
     public void collectPlayerMove()
     {
+
 
     }
 
