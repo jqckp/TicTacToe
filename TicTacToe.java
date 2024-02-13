@@ -23,6 +23,9 @@ public class TicTacToe
 
     public boolean validPosition()
     {
+
+        Position selectedPosition = Position.INVALID_POSITION;
+
         if (playerSelectedColumn > 2 || playerSelectedColumn < 0)
         {
             return false;
@@ -33,7 +36,21 @@ public class TicTacToe
             return false;
         }
 
+        for (Position position : Position.values())
+        {
+            if (position.getRow() == playerSelectedRow && position.getColumn() == playerSelectedColumn)
+            {
+                selectedPosition = position;
+                break;
+            }
+        }
 
+        if (selectedPosition.getTaken())
+        {
+            return false;
+        }
+
+        selectedPosition.setTaken(true);
         return true;
     }
     
@@ -59,6 +76,7 @@ public class TicTacToe
     {
        TicTacToe game = new TicTacToe();
        game.printGameBoard();
+       
        
     }
 
