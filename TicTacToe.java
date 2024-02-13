@@ -18,7 +18,13 @@ public class TicTacToe
     public TicTacToe()
     {
         moveCollector = new Scanner(System.in);
+
+    }
+
+    public boolean validPosition()
+    {
         
+        return true;
     }
     
     public void printGameBoard()
