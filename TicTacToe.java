@@ -4,7 +4,7 @@ public class TicTacToe
 
     public static int[][] moveTracker = new int[ROWS][COLUMNS];
 
-    public char[][] gameBoard = new char[ROWS][COLUMNS];
+    public static char[][] gameBoard = new char[ROWS][COLUMNS];
     
     
     public void printGameBoard()
@@ -19,7 +19,7 @@ public class TicTacToe
 
     public void generateOpponentMove()
     {
-        
+
     }
 
        
