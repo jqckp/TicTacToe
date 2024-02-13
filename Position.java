@@ -12,7 +12,7 @@ public enum Position
 
     private int row;
     private int column;
-    private boolean taken;
+    public boolean taken;
 
     Position(int row, int column)
     {
