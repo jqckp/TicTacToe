@@ -21,9 +21,13 @@ public class TicTacToe
 
     }
 
+    /**
+     * Validates player and opponent moves.
+     * @return - True indicating a valid move, false indicating an invalid move.
+     */
     public boolean validPosition()
     {
-
+        //Default position set to invalid.
         Position selectedPosition = Position.INVALID_POSITION;
 
         if (playerSelectedColumn > 2 || playerSelectedColumn < 0)
