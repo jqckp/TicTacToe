@@ -23,7 +23,17 @@ public class TicTacToe
 
     public boolean validPosition()
     {
-        
+        if (playerSelectedColumn > 2 || playerSelectedColumn < 0)
+        {
+            return false;
+        }
+
+        if (playerSelectedRow > 2 || playerSelectedRow < 0)
+        {
+            return false;
+        }
+
+
         return true;
     }
     
