@@ -12,7 +12,7 @@ public enum Position
 
     private int row;
     private int column;
-    public boolean taken;
+    private boolean taken;
 
     Position(int row, int column)
     {
@@ -28,5 +28,15 @@ public enum Position
     public int getColumn()
     {
         return column;
+    }
+
+    public boolean getTaken()
+    {
+        return taken;
+    }
+
+    public void setTaken(boolean taken)
+    {
+        this.taken = taken;
     }
 }
