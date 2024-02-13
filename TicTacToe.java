@@ -9,6 +9,16 @@ public class TicTacToe
     
     public void printGameBoard()
     {
+
+    }
+
+    public void collectPlayerMove()
+    {
+
+    }
+
+    public void generateOpponentMove()
+    {
         
     }
 
