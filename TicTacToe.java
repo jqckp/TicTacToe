@@ -18,9 +18,9 @@ public class TicTacToe
     public int playerSelectedColumn;
     
 
-    public TicTacToe()
+    public TicTacToe(Scanner scanner)
     {
-        moveCollector = new Scanner(System.in);
+        moveCollector = scanner;
 
     }
 
@@ -87,7 +87,7 @@ public class TicTacToe
 
     public static void main(String[] args) 
     {
-       TicTacToe game = new TicTacToe();
+       TicTacToe game = new TicTacToe(new Scanner(System.in));
        game.collectPlayerMove();
        
        
