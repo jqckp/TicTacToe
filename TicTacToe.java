@@ -7,6 +7,10 @@ public class TicTacToe
 {
     public static final int ROWS = 3, COLUMNS = 3;
 
+    public static final int MAX_ACCEPTED_ROW_OR_COLUMN = 2;
+
+    public static final int MIN_ACCEPTED_ROW_OR_COLUMN = 0;
+
     public static int[][] moveTracker;
 
     public static char[][] gameBoard;
