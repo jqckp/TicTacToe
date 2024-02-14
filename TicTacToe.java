@@ -133,8 +133,12 @@ public class TicTacToe
         opponentSelectedRow = -1;
         opponentSelectedColumn = -1;
 
+        do
+        {
+            opponentSelectedColumn = random.nextInt(COLUMNS);
+            opponentSelectedRow = random.nextInt(ROWS);
 
-
+        } while (!validPosition(opponentSelectedRow, opponentSelectedColumn, opponentMoves));
 
     }
 
