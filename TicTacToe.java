@@ -1,5 +1,6 @@
 import java.util.InputMismatchException;
 import java.util.LinkedList;
+import java.util.Random;
 import java.util.Scanner;
 
 
@@ -21,6 +22,8 @@ public class TicTacToe
     public static char[][] gameBoard;
 
     public Scanner moveCollector;
+
+    public Random random;
 
     public int playerSelectedRow;
 
@@ -128,6 +131,8 @@ public class TicTacToe
     {
         opponentSelectedRow = -1;
         opponentSelectedColumn = -1;
+
+
 
 
     }
