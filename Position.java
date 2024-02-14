@@ -19,6 +19,7 @@ public enum Position
     {
         this.row = row;
         this.column = column;
+        this.taken = taken;
     }
 
     public int getRow()
