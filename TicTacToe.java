@@ -41,12 +41,14 @@ public class TicTacToe
         //Default position set to invalid.
         Position selectedPosition = Position.INVALID_POSITION;
 
-        if (selectedColumn > 2 || selectedColumn < 0)
+        if (selectedColumn > MAX_ACCEPTED_ROW_OR_COLUMN || 
+            selectedColumn < MIN_ACCEPTED_ROW_OR_COLUMN)
         {
             return false;
         }
 
-        if (selectedRow > 2 || selectedRow < 0)
+        if (selectedRow > MAX_ACCEPTED_ROW_OR_COLUMN || 
+            selectedRow < MIN_ACCEPTED_ROW_OR_COLUMN)
         {
             return false;
         }
