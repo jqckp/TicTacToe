@@ -3,7 +3,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 
-
+/**
+ * Simple Tic-Tac-Toe terminal game, a Java classic.
+ * 
+ * @author - Jack Porter
+ * @version - 2/12/2024
+ */
 public class TicTacToe
 {
     public static final int ROWS = 3, COLUMNS = 3;
