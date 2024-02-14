@@ -73,6 +73,7 @@ public class TicTacToe
         }
 
         selectedPosition.setTaken(true);
+        moves.add(selectedPosition);
         return true;
     }
     
