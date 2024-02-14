@@ -32,7 +32,7 @@ public class TicTacToe
 
     public int opponentSelectedColumn;
 
-    public boolean hasWon;
+    public boolean hasWinner;
     
 
     public TicTacToe(Scanner scanner, Random random)
