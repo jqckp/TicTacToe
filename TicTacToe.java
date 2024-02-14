@@ -126,6 +126,8 @@ public class TicTacToe
 
     public void generateOpponentMove()
     {
+        opponentSelectedRow = -1;
+        opponentSelectedColumn = -1;
 
 
     }
