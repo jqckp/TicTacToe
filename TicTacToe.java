@@ -1,4 +1,7 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
+
+import javax.sound.midi.Soundbank;
 
 public class TicTacToe
 {
@@ -65,8 +68,13 @@ public class TicTacToe
 
     public void collectPlayerMove()
     {
+        
+        System.out.print("Enter row (1-3): ");
+        playerSelectedRow = moveCollector.nextInt();
 
 
+        System.out.print("Enter column (1-3): ");
+        playerSelectedColumn = moveCollector.nextInt();
 
     }
 
@@ -80,7 +88,7 @@ public class TicTacToe
     public static void main(String[] args) 
     {
        TicTacToe game = new TicTacToe();
-       game.printGameBoard();
+       game.collectPlayerMove();
        
        
     }
