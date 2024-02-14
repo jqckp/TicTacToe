@@ -1,4 +1,3 @@
-import java.util.InputMismatchException;
 import java.util.LinkedList;
 import java.util.Random;
 import java.util.Scanner;
@@ -111,19 +110,10 @@ public class TicTacToe
             {
                 System.out.println("Enter a number");
                 continue;
-                
             }
             
-
-            
-
         }while(!validPosition(playerSelectedRow, playerSelectedColumn, playerMoves));
         
-        
-
-
-        
-
     }
 
     
