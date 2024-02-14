@@ -34,6 +34,8 @@ public class TicTacToe
         moveCollector = scanner;
         moveTracker = new int[ROWS][COLUMNS];
         gameBoard = new char[ROWS][COLUMNS];
+        playerMoves = new LinkedList<>();
+        opponentMoves = new LinkedList<>();
 
     }
 
