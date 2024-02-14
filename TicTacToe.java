@@ -25,24 +25,24 @@ public class TicTacToe
      * Validates player and opponent moves.
      * @return - True indicating a valid move, false indicating an invalid move.
      */
-    public boolean validPosition()
+    public boolean validPosition(int selectedRow, int selectedColumn)
     {
         //Default position set to invalid.
         Position selectedPosition = Position.INVALID_POSITION;
 
-        if (playerSelectedColumn > 2 || playerSelectedColumn < 0)
+        if (selectedColumn > 2 || selectedColumn < 0)
         {
             return false;
         }
 
-        if (playerSelectedRow > 2 || playerSelectedRow < 0)
+        if (selectedRow > 2 || selectedRow < 0)
         {
             return false;
         }
 
         for (Position position : Position.values())
         {
-            if (position.getRow() == playerSelectedRow && position.getColumn() == playerSelectedColumn)
+            if (position.getRow() == selectedRow && position.getColumn() == selectedColumn)
             {
                 selectedPosition = position;
                 break;
@@ -65,6 +65,7 @@ public class TicTacToe
 
     public void collectPlayerMove()
     {
+
 
 
     }
