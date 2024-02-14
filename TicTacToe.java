@@ -26,6 +26,10 @@ public class TicTacToe
 
     public int playerSelectedColumn;
 
+    public int opponentSelectedRow;
+
+    public int opponentSelectedColumn;
+
     public boolean hasWon;
     
 
@@ -122,6 +126,7 @@ public class TicTacToe
 
     public void generateOpponentMove()
     {
+
 
     }
 
