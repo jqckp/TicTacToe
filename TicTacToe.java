@@ -7,9 +7,9 @@ public class TicTacToe
 {
     public static final int ROWS = 3, COLUMNS = 3;
 
-    public static int[][] moveTracker = new int[ROWS][COLUMNS];
+    public static int[][] moveTracker;
 
-    public static char[][] gameBoard = new char[ROWS][COLUMNS];
+    public static char[][] gameBoard;
 
     public Scanner moveCollector;
 
@@ -23,6 +23,8 @@ public class TicTacToe
     public TicTacToe(Scanner scanner)
     {
         moveCollector = scanner;
+        moveTracker = new int[ROWS][COLUMNS];
+        gameBoard = new char[ROWS][COLUMNS];
 
     }
 
