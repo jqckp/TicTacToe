@@ -62,7 +62,7 @@ public class TicTacToe
             }
         }
 
-        if (selectedPosition.getTaken())
+        if (selectedPosition.isTaken())
         {
             return false;
         }

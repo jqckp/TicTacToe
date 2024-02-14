@@ -32,7 +32,7 @@ public enum Position
         return column;
     }
 
-    public boolean getTaken()
+    public boolean isTaken()
     {
         return taken;
     }
