@@ -36,13 +36,14 @@ public class TicTacToe
     public boolean hasWon;
     
 
-    public TicTacToe(Scanner scanner)
+    public TicTacToe(Scanner scanner, Random random)
     {
         moveCollector = scanner;
         moveTracker = new int[ROWS][COLUMNS];
         gameBoard = new char[ROWS][COLUMNS];
         playerMoves = new LinkedList<>();
         opponentMoves = new LinkedList<>();
+        this.random = random;
 
     }
 
@@ -146,7 +147,7 @@ public class TicTacToe
 
     public static void main(String[] args) 
     {
-       TicTacToe game = new TicTacToe(new Scanner(System.in));
+       TicTacToe game = new TicTacToe(new Scanner(System.in), new Random());
        game.collectPlayerMove();
        
        
