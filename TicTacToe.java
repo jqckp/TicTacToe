@@ -16,6 +16,8 @@ public class TicTacToe
     public int playerSelectedRow;
 
     public int playerSelectedColumn;
+
+    public boolean hasWon;
     
 
     public TicTacToe(Scanner scanner)
@@ -79,6 +81,11 @@ public class TicTacToe
     }
 
     public void generateOpponentMove()
+    {
+
+    }
+
+    public void checkGameOver()
     {
 
     }
