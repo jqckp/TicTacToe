@@ -19,6 +19,8 @@ public class TicTacToe
 
     private static final WinCondtion[] WIN_CONDITIONS = WinCondtion.values();
 
+    private static final Position[] POSITIONS = Position.values();
+
     public LinkedList<Position> playerMoves;
 
     public LinkedList<Position> opponentMoves;
