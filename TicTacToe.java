@@ -140,6 +140,12 @@ public class TicTacToe
     public void checkGameOver()
     {
 
+
+    }
+
+    public void play()
+    {
+        
     }
 
        
