@@ -56,7 +56,7 @@ public class TicTacToe
      * Validates player and opponent moves.
      * @return - True indicating a valid move, false indicating an invalid move.
      */
-    public boolean validPosition(int selectedRow, int selectedColumn, LinkedList<Position> moves)
+    public boolean positionAvailable(int selectedRow, int selectedColumn, LinkedList<Position> moves)
     {
         //Default position set to invalid.
         Position selectedPosition = Position.INVALID_POSITION;
@@ -124,7 +124,7 @@ public class TicTacToe
             playerSelectedColumn -= 1;
             playerSelectedRow -= 1;
             
-        }while(!validPosition(playerSelectedRow, playerSelectedColumn, playerMoves));
+        }while(!positionAvailable(playerSelectedRow, playerSelectedColumn, playerMoves));
         
     }
 
@@ -140,7 +140,7 @@ public class TicTacToe
             opponentSelectedColumn = random.nextInt(COLUMNS);
             opponentSelectedRow = random.nextInt(ROWS);
 
-        } while (!validPosition(opponentSelectedRow, opponentSelectedColumn, opponentMoves));
+        } while (!positionAvailable(opponentSelectedRow, opponentSelectedColumn, opponentMoves));
 
     }
 
