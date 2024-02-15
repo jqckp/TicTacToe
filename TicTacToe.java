@@ -17,6 +17,8 @@ public class TicTacToe
 
     public static final int MIN_ACCEPTED_ROW_OR_COLUMN = 0;
 
+    private static final WinCondtion[] WIN_CONDITIONS = WinCondtion.values();
+
     public LinkedList<Position> playerMoves;
 
     public LinkedList<Position> opponentMoves;
@@ -143,9 +145,13 @@ public class TicTacToe
 
     public void checkGameOver()
     {
+        
+        
 
 
     }
+
+    
 
     public void play()
     {
