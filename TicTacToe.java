@@ -76,7 +76,7 @@ public class TicTacToe
             return false;
         }
 
-        for (Position position : Position.values())
+        for (Position position : POSITIONS)
         {
             if (position.getRow() == selectedRow && position.getColumn() == selectedColumn)
             {
