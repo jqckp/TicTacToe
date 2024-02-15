@@ -64,12 +64,14 @@ public class TicTacToe
         if (selectedColumn > MAX_ACCEPTED_ROW_OR_COLUMN || 
             selectedColumn < MIN_ACCEPTED_ROW_OR_COLUMN)
         {
+            System.out.println("Invalid position(s)...Enter value between 1 and 3");
             return false;
         }
 
         if (selectedRow > MAX_ACCEPTED_ROW_OR_COLUMN || 
             selectedRow < MIN_ACCEPTED_ROW_OR_COLUMN)
         {
+            System.out.println("Invalid position(s)...Enter value between 1 and 3");
             return false;
         }
 
