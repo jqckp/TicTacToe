@@ -13,10 +13,6 @@ public class TicTacToe
 {
     public static final int ROWS = 3, COLUMNS = 3;
 
-    public static final int MAX_ACCEPTED_ROW_OR_COLUMN = 2;
-
-    public static final int MIN_ACCEPTED_ROW_OR_COLUMN = 0;
-
     private static final WinCondtion[] WIN_CONDITIONS = WinCondtion.values();
 
     private static final Position[] POSITIONS = Position.values();
@@ -60,20 +56,6 @@ public class TicTacToe
     {
         //Default position set to invalid.
         Position selectedPosition = Position.INVALID_POSITION;
-
-        if (selectedColumn > MAX_ACCEPTED_ROW_OR_COLUMN || 
-            selectedColumn < MIN_ACCEPTED_ROW_OR_COLUMN)
-        {
-            System.out.println("Invalid position(s)...Enter value between 1 and 3");
-            return false;
-        }
-
-        if (selectedRow > MAX_ACCEPTED_ROW_OR_COLUMN || 
-            selectedRow < MIN_ACCEPTED_ROW_OR_COLUMN)
-        {
-            System.out.println("Invalid position(s)...Enter value between 1 and 3");
-            return false;
-        }
 
         for (Position position : POSITIONS)
         {
