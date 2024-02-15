@@ -116,6 +116,10 @@ public class TicTacToe
                 System.out.println("Enter a number");
                 continue;
             }
+
+
+            playerSelectedColumn -= 1;
+            playerSelectedRow -= 1;
             
         }while(!validPosition(playerSelectedRow, playerSelectedColumn, playerMoves));
         
@@ -145,7 +149,7 @@ public class TicTacToe
 
     public void play()
     {
-        
+
     }
 
        
