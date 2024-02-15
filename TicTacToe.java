@@ -21,13 +21,11 @@ public class TicTacToe
 
     private static final Position[] POSITIONS = Position.values();
 
+    public static char[][] gameBoard;
+
     public LinkedList<Position> playerMoves;
 
     public LinkedList<Position> opponentMoves;
-
-    public static int[][] moveTracker;
-
-    public static char[][] gameBoard;
 
     public Scanner moveCollector;
 
@@ -47,7 +45,6 @@ public class TicTacToe
     public TicTacToe(Scanner scanner, Random random)
     {
         moveCollector = scanner;
-        moveTracker = new int[ROWS][COLUMNS];
         gameBoard = new char[ROWS][COLUMNS];
         playerMoves = new LinkedList<>();
         opponentMoves = new LinkedList<>();
