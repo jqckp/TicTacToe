@@ -81,7 +81,7 @@ public class TicTacToe
     {
         selectedRow = -1;
         selectedColumn = -1;
-        
+
         do
         {
             try
@@ -109,8 +109,6 @@ public class TicTacToe
 
     public void generateOpponentMove()
     {
-        selectedRow = -1;
-        selectedColumn = -1;
         do
         {
             selectedColumn = random.nextInt(COLUMNS);
@@ -144,7 +142,6 @@ public class TicTacToe
     public static void main(String[] args) 
     {
        TicTacToe game = new TicTacToe(new Scanner(System.in), new Random());
-       
        
        
     }
