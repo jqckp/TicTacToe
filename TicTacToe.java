@@ -110,9 +110,6 @@ public class TicTacToe
 
     public void generateOpponentMove()
     {
-        opponentSelectedRow = -1;
-        opponentSelectedColumn = -1;
-
         do
         {
             opponentSelectedColumn = random.nextInt(COLUMNS);
@@ -146,7 +143,7 @@ public class TicTacToe
     public static void main(String[] args) 
     {
        TicTacToe game = new TicTacToe(new Scanner(System.in), new Random());
-       game.collectPlayerMove();
+       
        
        
     }
