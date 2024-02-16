@@ -83,8 +83,6 @@ public class TicTacToe
 
     public void collectPlayerMove()
     {
-        playerSelectedColumn = -1;
-        playerSelectedRow = -1;
         do
         {
             try
@@ -92,14 +90,12 @@ public class TicTacToe
                 System.out.print("Enter row (1-3): ");
                 playerSelectedRow = Integer.parseInt(moveCollector.nextLine());
                 
-
                 System.out.print("Enter column (1-3): ");
                 playerSelectedColumn = Integer.parseInt(moveCollector.nextLine());
                 
             } catch (NumberFormatException ex)
             {
                 System.out.println("Enter a number");
-                continue;
             }
 
 
