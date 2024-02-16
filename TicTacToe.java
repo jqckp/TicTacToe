@@ -77,6 +77,13 @@ public class TicTacToe
         
     }
 
+    /**
+     * Collects the human players move from the terminal.
+     * 
+     * Row and column selections are set to -1 by default in case the player
+     * enters in a string that can't be parsed to an integer. Row and column choices 
+     * are validated through positionAvailable.
+     */
     public void collectPlayerMove()
     {
         //Set row and column to negative one (invalid) in case user doesn't enter a number.
@@ -107,7 +114,11 @@ public class TicTacToe
     }
 
     
-    
+    /**
+     * Generates the opponent's move by randomly selecting column and row num.
+     * 
+     * Row and column numbers randomly generated are between 0 and 2 inclusive.
+     */
     public void generateOpponentMove()
     {
         do
