@@ -79,6 +79,7 @@ public class TicTacToe
 
     public void collectPlayerMove()
     {
+        //Set row and column to negative one (invalid) in case user doesn't enter a number.
         selectedRow = -1;
         selectedColumn = -1;
 
@@ -106,7 +107,7 @@ public class TicTacToe
     }
 
     
-
+    
     public void generateOpponentMove()
     {
         do
