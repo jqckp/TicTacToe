@@ -27,13 +27,9 @@ public class TicTacToe
 
     public Random random;
 
-    public int playerSelectedRow;
+    public int selectedRow;
 
-    public int playerSelectedColumn;
-
-    public int opponentSelectedRow;
-
-    public int opponentSelectedColumn;
+    public int selectedColumn;
 
     public boolean hasWinner;
     
@@ -88,10 +84,10 @@ public class TicTacToe
             try
             {
                 System.out.print("Enter row (1-3): ");
-                playerSelectedRow = Integer.parseInt(moveCollector.nextLine());
+                selectedRow = Integer.parseInt(moveCollector.nextLine());
                 
                 System.out.print("Enter column (1-3): ");
-                playerSelectedColumn = Integer.parseInt(moveCollector.nextLine());
+                selectedColumn = Integer.parseInt(moveCollector.nextLine());
                 
             } catch (NumberFormatException ex)
             {
@@ -99,10 +95,10 @@ public class TicTacToe
             }
 
 
-            playerSelectedColumn -= 1;
-            playerSelectedRow -= 1;
+            selectedColumn -= 1;
+            selectedRow -= 1;
             
-        }while(!positionAvailable(playerSelectedRow, playerSelectedColumn, playerMoves));
+        }while(!positionAvailable(selectedRow, selectedColumn, playerMoves));
         
     }
 
@@ -112,10 +108,10 @@ public class TicTacToe
     {
         do
         {
-            opponentSelectedColumn = random.nextInt(COLUMNS);
-            opponentSelectedRow = random.nextInt(ROWS);
+            selectedColumn = random.nextInt(COLUMNS);
+            selectedRow = random.nextInt(ROWS);
 
-        } while (!positionAvailable(opponentSelectedRow, opponentSelectedColumn, opponentMoves));
+        } while (!positionAvailable(selectedRow, selectedColumn, opponentMoves));
 
     }
 
