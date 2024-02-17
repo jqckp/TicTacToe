@@ -149,6 +149,17 @@ public class TicTacToe
 
     }
 
+    private void runGame()
+    {
+        if (playerGoesFirst())
+        {
+            collectPlayerMove();
+            checkGameOver();
+            generateOpponentMove();
+            checkGameOver();
+        }
+    }
+
     private boolean playerGoesFirst()
     {
         return random.nextBoolean();
