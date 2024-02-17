@@ -161,8 +161,7 @@ public class TicTacToe
     {
         for (WinCondtion winCondition : WIN_CONDITIONS)
         {
-            if (moves.contains(winCondition.getPosOne()) && moves.contains(winCondition.getPosTwo())
-                && moves.contains(winCondition.getPosThree()))
+            if (moves.containsAll(winCondition.getPositions()))
             {
                 return true;
             }
