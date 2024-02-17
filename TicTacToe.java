@@ -32,6 +32,8 @@ public class TicTacToe
     private int selectedColumn;
 
     private boolean hasWinner;
+
+    private int moveCount;
     
 
     public TicTacToe(Scanner scanner, Random random)
@@ -145,6 +147,7 @@ public class TicTacToe
         while (!hasWinner)
         {
             runGame();
+            moveCount++;
         }
 
     }
