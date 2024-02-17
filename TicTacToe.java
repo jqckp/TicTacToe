@@ -88,17 +88,7 @@ public class TicTacToe
     
     private void printGameBoard()
     {
-        int gameBoardHeight = 5;
-
-        System.out.println("+-----------+");
-
-        for (int i = 0; i < gameBoardHeight; i++)
-        {
-
-
-        }
-
-        System.out.println("+-----------+");
+        
     }
 
     /**
