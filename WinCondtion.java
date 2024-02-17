@@ -9,9 +9,9 @@ public enum WinCondtion
     TOP_LEFT_TO_BOTTOM_RIGHT(Position.TOP_LEFT, Position.CENTER, Position.BOTTOM_RIGHT),
     TOP_RIGHT_TO_BOTTOM_LEFT(Position.TOP_RIGHT, Position.CENTER, Position.BOTTOM_LEFT);
 
-    Position posOne;
-    Position posTwo;
-    Position posThree;
+    private Position posOne;
+    private Position posTwo;
+    private Position posThree;
 
     WinCondtion(Position posOne, Position posTwo, Position posThree)
     {
