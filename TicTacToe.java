@@ -159,6 +159,11 @@ public class TicTacToe
 
     }
 
+    private void compareMovesToWinConditions()
+    {
+        
+    }
+
     
 
     public void play()
