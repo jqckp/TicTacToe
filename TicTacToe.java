@@ -174,19 +174,25 @@ public class TicTacToe
     {
         if (playerGoesFirst)
         {
-            collectPlayerMove();
-            checkGameOver();
-            printGameBoard();
-            generateOpponentMove();
-            checkGameOver();
-            printGameBoard();
+            executePlayerTurn();
+            executeOpponentTurn();
             return;
         }
 
-        generateOpponentMove();
+        executeOpponentTurn();
+        executePlayerTurn();
+    }
+
+    private void executePlayerTurn()
+    {
+        collectPlayerMove();
         checkGameOver();
         printGameBoard();
-        collectPlayerMove();
+    }
+
+    private void executeOpponentTurn()
+    {
+        generateOpponentMove();
         checkGameOver();
         printGameBoard();
     }
