@@ -176,8 +176,10 @@ public class TicTacToe
         {
             collectPlayerMove();
             checkGameOver();
+            printGameBoard();
             generateOpponentMove();
             checkGameOver();
+            printGameBoard();
         }
     }
 
