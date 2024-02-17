@@ -165,7 +165,6 @@ public class TicTacToe
         while (!hasWinner)
         {
             runGame();
-            moveCount++;
         }
 
     }
@@ -188,6 +187,7 @@ public class TicTacToe
         collectPlayerMove();
         checkGameOver();
         printGameBoard();
+        moveCount++;
     }
 
     private void executeOpponentTurn()
@@ -195,6 +195,7 @@ public class TicTacToe
         generateOpponentMove();
         checkGameOver();
         printGameBoard();
+        moveCount++;
     }
 
     
