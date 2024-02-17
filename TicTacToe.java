@@ -15,6 +15,8 @@ public class TicTacToe
 
     private static final int MIN_COMBINED_MOVES_TO_WIN = 5;
 
+    private static final char EMPTY_POSITION = '\u0000';
+
     private static final WinCondtion[] WIN_CONDITIONS = WinCondtion.values();
 
     private static final Position[] POSITIONS = Position.values();
