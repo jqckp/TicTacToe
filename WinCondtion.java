@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.List;
+
 public enum WinCondtion 
 {
     TOP_HORIZONTAL(Position.TOP_LEFT, Position.TOP_CENTER, Position.TOP_RIGHT),
@@ -12,6 +15,8 @@ public enum WinCondtion
     private Position posOne;
     private Position posTwo;
     private Position posThree;
+
+    private static List<Position> positions;
 
     WinCondtion(Position posOne, Position posTwo, Position posThree)
     {
@@ -33,6 +38,20 @@ public enum WinCondtion
     public Position getPosThree()
     {
         return posThree;
+    }
+
+    public List<Position> getPositions()
+    {
+        if (positions == null)
+        {
+            positions = new LinkedList<>();
+        }
+        positions.clear();
+        positions.add(this.posOne);
+        positions.add(this.posTwo);
+        positions.add(this.posThree);
+        return positions;
+
     }
 
     
