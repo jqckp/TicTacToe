@@ -149,6 +149,11 @@ public class TicTacToe
 
     }
 
+    private boolean playerGoesFirst()
+    {
+        return random.nextBoolean();
+    }
+
        
 
     public static void main(String[] args) 
