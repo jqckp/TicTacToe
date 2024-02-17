@@ -180,7 +180,14 @@ public class TicTacToe
             generateOpponentMove();
             checkGameOver();
             printGameBoard();
+            return;
         }
+
+        generateOpponentMove();
+        checkGameOver();
+        printGameBoard();
+        checkGameOver();
+        printGameBoard();
     }
 
     
