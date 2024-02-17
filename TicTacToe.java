@@ -78,7 +78,8 @@ public class TicTacToe
     
     private void printGameBoard()
     {
-        
+        System.out.println("+-----------+");
+        System.out.println("+-----------+");
     }
 
     /**
