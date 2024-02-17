@@ -136,7 +136,7 @@ public class TicTacToe
 
     private void checkGameOver()
     {
-        if (moveCount <= 5)
+        if (moveCount >= MIN_MOVES_TO_WIN)
         {
 
         }
