@@ -159,7 +159,16 @@ public class TicTacToe
 
     private boolean compareMovesToWinConditions(LinkedList<Position> moves)
     {
-        return true;
+        for (WinCondtion winCondition : WIN_CONDITIONS)
+        {
+            if (moves.contains(winCondition.getPosOne()) && moves.contains(winCondition.getPosTwo())
+                && moves.contains(winCondition.getPosThree()))
+            {
+                return true;
+            }
+            
+        }
+        return false;
     }
 
     
