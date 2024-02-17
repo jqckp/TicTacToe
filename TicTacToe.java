@@ -148,7 +148,7 @@ public class TicTacToe
 
     }
 
-    private void checkGameOver()
+    private void checkGameOver(LinkedList<Position> moves)
     {
         if (totalMoveCount >= MIN_COMBINED_MOVES_TO_WIN)
         {
@@ -182,14 +182,14 @@ public class TicTacToe
     private void executePlayerTurn()
     {
         collectPlayerMove();
-        checkGameOver();
+        checkGameOver(playerMoves);
         printGameBoard();
     }
 
     private void executeOpponentTurn()
     {
         generateOpponentMove();
-        checkGameOver();
+        checkGameOver(opponentMoves);
         printGameBoard();
     }
 
