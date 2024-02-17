@@ -35,6 +35,8 @@ public class TicTacToe
 
     private boolean hasWinner;
 
+    private boolean playerGoesFirst;
+
     private int moveCount;
     
 
@@ -45,6 +47,7 @@ public class TicTacToe
         playerMoves = new LinkedList<>();
         opponentMoves = new LinkedList<>();
         this.random = random;
+        playerGoesFirst = random.nextBoolean();
 
     }
 
@@ -169,7 +172,7 @@ public class TicTacToe
 
     private void runGame()
     {
-        if ()
+        if (playerGoesFirst)
         {
             collectPlayerMove();
             checkGameOver();
