@@ -37,7 +37,7 @@ public class TicTacToe
 
     private boolean playerGoesFirst;
 
-    private int moveCount;
+    private int totalMoveCount;
     
 
     public TicTacToe(Scanner scanner, Random random)
@@ -76,7 +76,7 @@ public class TicTacToe
 
         selectedPosition.setTaken(true);
         moves.add(selectedPosition);
-        moveCount++;
+        totalMoveCount++;
         return true;
     }
     
@@ -150,7 +150,7 @@ public class TicTacToe
 
     private void checkGameOver()
     {
-        if (moveCount >= MIN_COMBINED_MOVES_TO_WIN)
+        if (totalMoveCount >= MIN_COMBINED_MOVES_TO_WIN)
         {
 
         }
