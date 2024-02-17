@@ -164,23 +164,19 @@ public class TicTacToe
     {
         while (!hasWinner)
         {
-            runGame();
-        }
+            if (playerGoesFirst)
+            {
+                executePlayerTurn();
+                executeOpponentTurn();
+                continue;
+            }
 
-    }
-
-    private void runGame()
-    {
-        if (playerGoesFirst)
-        {
-            executePlayerTurn();
             executeOpponentTurn();
-            return;
+            executePlayerTurn();
         }
 
-        executeOpponentTurn();
-        executePlayerTurn();
     }
+
 
     private void executePlayerTurn()
     {
