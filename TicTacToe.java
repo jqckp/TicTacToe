@@ -152,16 +152,16 @@ public class TicTacToe
     {
         if (totalMoveCount >= MIN_COMBINED_MOVES_TO_WIN)
         {
-            compareMovesToWinConditions(moves);
+            hasWinner = compareMovesToWinConditions(moves);
         }
         
 
 
     }
 
-    private void compareMovesToWinConditions(LinkedList<Position> moves)
+    private boolean compareMovesToWinConditions(LinkedList<Position> moves)
     {
-
+        return true;
     }
 
     
