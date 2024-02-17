@@ -144,7 +144,7 @@ public class TicTacToe
     {
         while (!hasWinner)
         {
-            
+            runGame();
         }
 
     }
