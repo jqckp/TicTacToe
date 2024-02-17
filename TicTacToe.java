@@ -38,6 +38,10 @@ public class TicTacToe
     private boolean playerGoesFirst;
 
     private int totalMoveCount;
+
+    private char playerMarker = 'x';
+
+    private char opponentMarker = 'o';
     
 
     public TicTacToe(Scanner scanner, Random random)
