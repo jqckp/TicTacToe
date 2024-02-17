@@ -11,27 +11,27 @@ import java.util.Scanner;
  */
 public class TicTacToe
 {
-    public static final int ROWS = 3, COLUMNS = 3;
+    private static final int ROWS = 3, COLUMNS = 3;
 
     private static final WinCondtion[] WIN_CONDITIONS = WinCondtion.values();
 
     private static final Position[] POSITIONS = Position.values();
 
-    public static char[][] gameBoard;
+    private static char[][] gameBoard;
 
-    public LinkedList<Position> playerMoves;
+    private LinkedList<Position> playerMoves;
 
-    public LinkedList<Position> opponentMoves;
+    private LinkedList<Position> opponentMoves;
 
-    public Scanner moveCollector;
+    private Scanner moveCollector;
 
-    public Random random;
+    private Random random;
 
-    public int selectedRow;
+    private int selectedRow;
 
-    public int selectedColumn;
+    private int selectedColumn;
 
-    public boolean hasWinner;
+    private boolean hasWinner;
     
 
     public TicTacToe(Scanner scanner, Random random)
@@ -72,7 +72,7 @@ public class TicTacToe
         return true;
     }
     
-    public void printGameBoard()
+    private void printGameBoard()
     {
         
     }
@@ -84,7 +84,7 @@ public class TicTacToe
      * enters in a string that can't be parsed to an integer. Row and column choices 
      * are validated through positionAvailable.
      */
-    public void collectPlayerMove()
+    private void collectPlayerMove()
     {
         //Set row and column to negative one (invalid) in case user doesn't enter a number.
         selectedRow = -1;
@@ -119,7 +119,7 @@ public class TicTacToe
      * 
      * Row and column numbers randomly generated are between 0 and 2 inclusive.
      */
-    public void generateOpponentMove()
+    private void generateOpponentMove()
     {
         do
         {
@@ -130,7 +130,7 @@ public class TicTacToe
 
     }
 
-    public void checkGameOver()
+    private void checkGameOver()
     {
         
         
