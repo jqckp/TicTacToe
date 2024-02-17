@@ -13,7 +13,7 @@ public class TicTacToe
 {
     private static final int ROWS = 3, COLUMNS = 3;
 
-    private static final int MIN_MOVES_TO_WIN = 5;
+    private static final int MIN_COMBINED_MOVES_TO_WIN = 5;
 
     private static final WinCondtion[] WIN_CONDITIONS = WinCondtion.values();
 
@@ -136,7 +136,7 @@ public class TicTacToe
 
     private void checkGameOver()
     {
-        if (moveCount >= MIN_MOVES_TO_WIN)
+        if (moveCount >= MIN_COMBINED_MOVES_TO_WIN)
         {
 
         }
