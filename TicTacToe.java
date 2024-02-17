@@ -84,7 +84,8 @@ public class TicTacToe
 
         for (int i = 0; i < gameBoardHeight; i++)
         {
-            
+
+
         }
 
         System.out.println("+-----------+");
@@ -168,7 +169,7 @@ public class TicTacToe
 
     private void runGame()
     {
-        if (playerGoesFirst())
+        if ()
         {
             collectPlayerMove();
             checkGameOver();
@@ -177,10 +178,7 @@ public class TicTacToe
         }
     }
 
-    private boolean playerGoesFirst()
-    {
-        return random.nextBoolean();
-    }
+    
 
        
 
