@@ -20,5 +20,20 @@ public enum WinCondtion
         this.posThree = posThree;
     }
 
+    public Position getPosOne()
+    {
+        return posOne;
+    }
+
+    public Position getPosTwo()
+    {
+        return posTwo;
+    }
+
+    public Position getPosThree()
+    {
+        return posThree;
+    }
+
     
 }
