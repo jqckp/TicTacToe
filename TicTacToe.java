@@ -13,6 +13,8 @@ public class TicTacToe
 {
     private static final int ROWS = 3, COLUMNS = 3;
 
+    private static final int MIN_MOVES_TO_WIN = 5;
+
     private static final WinCondtion[] WIN_CONDITIONS = WinCondtion.values();
 
     private static final Position[] POSITIONS = Position.values();
@@ -136,7 +138,7 @@ public class TicTacToe
     {
         if (moveCount <= 5)
         {
-            
+
         }
         
 
