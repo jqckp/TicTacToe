@@ -76,6 +76,7 @@ public class TicTacToe
 
         selectedPosition.setTaken(true);
         moves.add(selectedPosition);
+        moveCount++;
         return true;
     }
     
@@ -183,7 +184,6 @@ public class TicTacToe
         collectPlayerMove();
         checkGameOver();
         printGameBoard();
-        moveCount++;
     }
 
     private void executeOpponentTurn()
@@ -191,7 +191,6 @@ public class TicTacToe
         generateOpponentMove();
         checkGameOver();
         printGameBoard();
-        moveCount++;
     }
 
     
