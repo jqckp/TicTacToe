@@ -180,6 +180,17 @@ public class TicTacToe
         if(hasWinner)
         {
             printGameBoard();
+
+            if (moves.equals(playerMoves))
+            {
+                System.out.println("You won!");
+            }
+
+            else
+            {
+                System.out.println("You lost!");
+            }
+
             System.exit(0);
         }
         
