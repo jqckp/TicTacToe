@@ -49,6 +49,12 @@ public class TicTacToe
     private char opponentMarker = 'o';
     
 
+    /**
+     * Initializes a game of Tic-Tac-Toe.
+     * 
+     * @param scanner - Instance of Scanner class.
+     * @param random - Instance of Random class.
+     */
     public TicTacToe(Scanner scanner, Random random)
     {
         moveCollector = scanner;
@@ -62,6 +68,12 @@ public class TicTacToe
 
     /**
      * Validates player and opponent moves.
+     * 
+     * @param selectedRow - Row chosen by player or opponent.
+     * @param selectedColumn - Column selected by player or opponent.
+     * @param moves - All previous moves of player or opponent.
+     * @param marker - Character (x or o) that user or opponent is playing as.
+     * 
      * @return - True indicating a valid move, false indicating an invalid move.
      */
     private boolean positionAvailable(int selectedRow, int selectedColumn,
@@ -91,6 +103,9 @@ public class TicTacToe
         return true;
     }
     
+    /**
+     * Prints the game board to the terminal.
+     */
     private void printGameBoard()
     {
         System.out.println(gameBoard[0][0] + " | " + gameBoard[0][1] + " | " + gameBoard[0][2]);
@@ -110,7 +125,6 @@ public class TicTacToe
      */
     private void collectPlayerMove()
     {
-        //Set row and column to negative one (invalid) in case user doesn't enter a number.
         selectedRow = -1;
         selectedColumn = -1;
 
@@ -154,6 +168,20 @@ public class TicTacToe
 
     }
 
+    /**
+     * Checks to see if the game is over or not.
+     * 
+     * Only checks to see if the game is over if the combined number of moves
+     * is 5 or greater (the minimum before someone can win).
+     * 
+     * If a player's moves match a win condition, that player wins.
+     * 
+     * If the max number of combined moves has been made (9)
+     * and there isn't winner, game is a tie.
+     * 
+     * 
+     * @param moves - All claimed positions by that specific player.
+     */
     private void checkGameOver(LinkedList<Position> moves)
     {
         if (!(totalMoveCount >= MIN_COMBINED_MOVES_TO_WIN))
@@ -197,7 +225,9 @@ public class TicTacToe
     }
 
     
-
+    /**
+     * Main game loop.
+     */
     public void play()
     {
         while (true)
@@ -216,6 +246,9 @@ public class TicTacToe
     }
 
 
+    /**
+     * All steps for one turn of player.
+     */
     private void executePlayerTurn()
     {
         collectPlayerMove();
@@ -223,6 +256,9 @@ public class TicTacToe
         printGameBoard();
     }
 
+    /**
+     * All steps for one turn of opponent.
+     */
     private void executeOpponentTurn()
     {
         generateOpponentMove();
