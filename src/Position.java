@@ -1,3 +1,4 @@
+package src;
 public enum Position 
 {
     TOP_LEFT(0,0, false),
