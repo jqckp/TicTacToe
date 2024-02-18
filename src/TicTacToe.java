@@ -16,6 +16,8 @@ public class TicTacToe
 
     private static final int MIN_COMBINED_MOVES_TO_WIN = 5;
 
+    private static final int MAXIMUM_NUM_OF_MOVES = 9;
+
     private static final char EMPTY_POSITION = '\u0000';
 
     private static final WinCondtion[] WIN_CONDITIONS = WinCondtion.values();
@@ -158,6 +160,12 @@ public class TicTacToe
         {
             hasWinner = compareMovesToWinConditions(moves);
         }
+
+        if (totalMoveCount == MAXIMUM_NUM_OF_MOVES)
+        {
+            hasWinner = true;
+            System.out.println("Tie");
+        }
         
 
 
@@ -188,7 +196,7 @@ public class TicTacToe
                 executeOpponentTurn();
                 continue;
             }
-
+            
             executeOpponentTurn();
             executePlayerTurn();
         }
