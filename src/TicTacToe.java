@@ -156,15 +156,25 @@ public class TicTacToe
 
     private void checkGameOver(LinkedList<Position> moves)
     {
-        if (totalMoveCount >= MIN_COMBINED_MOVES_TO_WIN)
+        if (!(totalMoveCount >= MIN_COMBINED_MOVES_TO_WIN))
         {
-            hasWinner = compareMovesToWinConditions(moves);
+            return;
         }
 
-        if (totalMoveCount == MAXIMUM_NUM_OF_MOVES)
+        for (WinCondtion winCondition : WIN_CONDITIONS)
         {
-            hasWinner = true;
+            if (moves.containsAll(winCondition.getPositions()))
+            {
+                hasWinner = true;
+            }
+            
+        }
+
+        if (totalMoveCount == MAXIMUM_NUM_OF_MOVES && !hasWinner)
+        {
+            printGameBoard();
             System.out.println("Tie");
+            System.exit(0);
         }
 
         if(hasWinner)
@@ -173,21 +183,6 @@ public class TicTacToe
             System.exit(0);
         }
         
-
-
-    }
-
-    private boolean compareMovesToWinConditions(LinkedList<Position> moves)
-    {
-        for (WinCondtion winCondition : WIN_CONDITIONS)
-        {
-            if (moves.containsAll(winCondition.getPositions()))
-            {
-                return true;
-            }
-            
-        }
-        return false;
     }
 
     
