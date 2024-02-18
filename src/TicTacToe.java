@@ -166,6 +166,12 @@ public class TicTacToe
             hasWinner = true;
             System.out.println("Tie");
         }
+
+        if(hasWinner)
+        {
+            printGameBoard();
+            System.exit(0);
+        }
         
 
 
