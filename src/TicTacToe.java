@@ -64,6 +64,14 @@ public class TicTacToe
         this.random = random;
         playerGoesFirst = random.nextBoolean();
 
+        for (int i = 0; i < gameBoard.length; i++)
+        {
+            for (int j = 0; j < gameBoard[i].length; j++)
+            {
+                gameBoard[i][j] = ' ';
+            }
+        }
+
     }
 
     /**
@@ -111,7 +119,7 @@ public class TicTacToe
         System.out.println(gameBoard[0][0] + " | " + gameBoard[0][1] + " | " + gameBoard[0][2]);
         System.out.println("-----------");
         System.out.println(gameBoard[1][0] + " | " + gameBoard[1][1] + " | " + gameBoard[1][2]);
-        System.out.println("--------------");
+        System.out.println("-----------");
         System.out.println(gameBoard[2][0] + " | " + gameBoard[2][1] + " | " + gameBoard[2][2]);
         System.out.println();
     }
