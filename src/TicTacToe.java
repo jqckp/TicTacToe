@@ -64,9 +64,9 @@ public class TicTacToe
         this.random = random;
         playerGoesFirst = random.nextBoolean();
 
-        for (int i = 0; i < gameBoard.length; i++)
+        for (int i = 0; i < ROWS; i++)
         {
-            for (int j = 0; j < gameBoard[i].length; j++)
+            for (int j = 0; j < COLUMNS; j++)
             {
                 gameBoard[i][j] = ' ';
             }
