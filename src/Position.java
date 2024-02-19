@@ -1,4 +1,12 @@
 package src;
+
+/**
+ * Defines valid positions on the gameboard and 
+ * stores information on spot availability.
+ * 
+ * @author - Jack Porter
+ * @version - 2/12/2024
+ */
 public enum Position 
 {
     TOP_LEFT(0,0, false),
@@ -16,6 +24,13 @@ public enum Position
     private int column;
     private boolean taken;
 
+    /**
+     * Initializes position of gameboard.
+     * 
+     * @param row - Row of position
+     * @param column - Column of position
+     * @param taken - Position availablity
+     */
     Position(int row, int column, boolean taken)
     {
         this.row = row;
@@ -23,21 +38,37 @@ public enum Position
         this.taken = taken;
     }
 
+    /**
+     * Gets row of position.
+     * @return - row of position.
+     */
     public int getRow()
     {
         return row;
     }
 
+    /**
+     * Gets column of position.
+     * @return - column of position.
+     */
     public int getColumn()
     {
         return column;
     }
 
+    /**
+     * Gets state of spot availability.
+     * @return - spot availability.
+     */
     public boolean isTaken()
     {
         return taken;
     }
 
+    /**
+     * Updates status of spot availability
+     * @param taken - new availability status.
+     */
     public void setTaken(boolean taken)
     {
         if (this != INVALID_POSITION)
