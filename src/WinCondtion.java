@@ -2,6 +2,12 @@ package src;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Defines Tic-Tac-Toe win conditions.
+ * 
+ * @author - Jack Porter
+ * @version - 2/12/2024
+ */
 public enum WinCondtion 
 {
     TOP_HORIZONTAL(Position.TOP_LEFT, Position.TOP_CENTER, Position.TOP_RIGHT),
@@ -19,6 +25,12 @@ public enum WinCondtion
 
     private static List<Position> positions;
 
+    /**
+     * Initializes win conditions.
+     * @param posOne - First position of win condition.
+     * @param posTwo - Second position of win condition.
+     * @param posThree - Third position of win condition.
+     */
     WinCondtion(Position posOne, Position posTwo, Position posThree)
     {
         this.posOne = posOne;
@@ -26,21 +38,37 @@ public enum WinCondtion
         this.posThree = posThree;
     }
 
+    /**
+     * Gets first position of win condition.
+     * @return - Position one.
+     */
     public Position getPosOne()
     {
         return posOne;
     }
 
+    /**
+     * Gets second position of win condition.
+     * @return - Position two.
+     */
     public Position getPosTwo()
     {
         return posTwo;
     }
 
+    /**
+     * Gets third position of win condition.
+     * @return - Position three.
+     */
     public Position getPosThree()
     {
         return posThree;
     }
 
+    /**
+     * Gets all positions of specified win condition.
+     * @return - List of all positions that define specified win condition.
+     */
     public List<Position> getPositions()
     {
         if (positions == null)
