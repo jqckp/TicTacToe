@@ -271,6 +271,16 @@ public class TicTacToe
     {
         generateOpponentMove();
         checkGameOver(opponentMoves);
+
+        try 
+        {
+            System.out.println("Waiting for opponent...");
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+            System.out.println("Interupted");
+        }
+
+
         printGameBoard();
     }
 
