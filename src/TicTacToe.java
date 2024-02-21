@@ -121,7 +121,6 @@ public class TicTacToe
         System.out.println(gameBoard[1][0] + " | " + gameBoard[1][1] + " | " + gameBoard[1][2]);
         System.out.println("----------");
         System.out.println(gameBoard[2][0] + " | " + gameBoard[2][1] + " | " + gameBoard[2][2]);
-        System.out.println();
     }
 
     /**
@@ -274,7 +273,7 @@ public class TicTacToe
 
         try 
         {
-            System.out.println("Waiting for opponent...");
+            System.out.println("Waiting for opponent...\n");
             Thread.sleep(1500);
         } catch (InterruptedException e) {
             System.out.println("Interupted");
