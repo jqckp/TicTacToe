@@ -116,6 +116,7 @@ public class TicTacToe
      */
     private void printGameBoard()
     {
+        System.out.print("\033[H\033[2J");
         System.out.println(gameBoard[0][0] + " | " + gameBoard[0][1] + " | " + gameBoard[0][2]);
         System.out.println("----------");
         System.out.println(gameBoard[1][0] + " | " + gameBoard[1][1] + " | " + gameBoard[1][2]);
