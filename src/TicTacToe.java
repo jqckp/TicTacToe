@@ -64,13 +64,6 @@ public class TicTacToe
         this.random = random;
         playerGoesFirst = random.nextBoolean();
 
-        for (int i = 0; i < ROWS; i++)
-        {
-            for (int j = 0; j < COLUMNS; j++)
-            {
-                gameBoard[i][j] = ' ';
-            }
-        }
 
     }
 
@@ -107,7 +100,7 @@ public class TicTacToe
         selectedPosition.setTaken(true);
         moves.add(selectedPosition);
         totalMoveCount++;
-        gameBoard[selectedPosition.getRow()][selectedPosition.getColumn()] = marker;
+        selectedPosition.setOccupyingPlayer(marker);
         return true;
     }
     
@@ -117,11 +110,11 @@ public class TicTacToe
     private void printGameBoard()
     {
         System.out.print("\033[H\033[2J");
-        System.out.println(gameBoard[0][0] + " | " + gameBoard[0][1] + " | " + gameBoard[0][2]);
+        System.out.println(Position.TOP_LEFT.getOccupyingPlayer() + " | " + Position.TOP_CENTER.getOccupyingPlayer() + " | " + Position.TOP_RIGHT.getOccupyingPlayer());
         System.out.println("----------");
-        System.out.println(gameBoard[1][0] + " | " + gameBoard[1][1] + " | " + gameBoard[1][2]);
+        System.out.println(Position.MIDDLE_LEFT.getOccupyingPlayer() + " | " + Position.CENTER.getOccupyingPlayer() + " | " + Position.MIDDLE_RIGHT.getOccupyingPlayer());
         System.out.println("----------");
-        System.out.println(gameBoard[2][0] + " | " + gameBoard[2][1] + " | " + gameBoard[2][2]);
+        System.out.println(Position.BOTTOM_LEFT.getOccupyingPlayer() + " | " + Position.BOTTOM_CENTER.getOccupyingPlayer() + " | " + Position.BOTTOM_RIGHT.getOccupyingPlayer());
     }
 
     /**
