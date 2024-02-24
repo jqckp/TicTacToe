@@ -51,9 +51,9 @@ public class TicTacToe
      * @param scanner - Instance of Scanner class.
      * @param random - Instance of Random class.
      */
-    public TicTacToe(Scanner scanner, Random random)
+    public TicTacToe(Scanner moveCollector, Random random)
     {
-        moveCollector = scanner;
+        this.moveCollector = moveCollector;
         playerMoves = new LinkedList<>();
         opponentMoves = new LinkedList<>();
         this.random = random;
