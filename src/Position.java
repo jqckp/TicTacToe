@@ -58,7 +58,23 @@ public enum Position
         return column;
     }
 
-    
+    /**
+     * Gets the player that is occupying specified spot.
+     * @return - occupyingPlayer
+     */
+    public char getOccupyingPlayer()
+    {
+        return occupyingPlayer;
+    }
+
+    /**
+     * Updates the player occupying specified spot.
+     * @param occupyingPlayer - which player?
+     */
+    public void setOccupyingPlayer(char occupyingPlayer)
+    {
+        this.occupyingPlayer = occupyingPlayer;
+    }
 
     /**
      * Gets state of spot availability.
