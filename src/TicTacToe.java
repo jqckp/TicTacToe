@@ -1,5 +1,8 @@
 package src;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -20,7 +23,7 @@ public class TicTacToe
 
     private static final WinCondtion[] WIN_CONDITIONS = WinCondtion.values();
 
-    private static final Position[] POSITIONS = Position.values();
+    private static final List<Position> POSITIONS = Arrays.asList(Position.values());
 
     private LinkedList<Position> playerMoves;
 
@@ -104,12 +107,16 @@ public class TicTacToe
      */
     private void printGameBoard()
     {
+
+        Iterator<Position> itr = POSITIONS.iterator();
+        
+
         System.out.print("\033[H\033[2J");
-        System.out.println(Position.TOP_LEFT.getOccupyingPlayer() + " | " + Position.TOP_CENTER.getOccupyingPlayer() + " | " + Position.TOP_RIGHT.getOccupyingPlayer());
-        System.out.println("----------");
-        System.out.println(Position.MIDDLE_LEFT.getOccupyingPlayer() + " | " + Position.CENTER.getOccupyingPlayer() + " | " + Position.MIDDLE_RIGHT.getOccupyingPlayer());
-        System.out.println("----------");
-        System.out.println(Position.BOTTOM_LEFT.getOccupyingPlayer() + " | " + Position.BOTTOM_CENTER.getOccupyingPlayer() + " | " + Position.BOTTOM_RIGHT.getOccupyingPlayer());
+        System.out.println(" " + Position.TOP_LEFT.getOccupyingPlayer() + " | " + Position.TOP_CENTER.getOccupyingPlayer() + " | " + Position.TOP_RIGHT.getOccupyingPlayer());
+        System.out.println("-----------");
+        System.out.println(" " + Position.MIDDLE_LEFT.getOccupyingPlayer() + " | " + Position.CENTER.getOccupyingPlayer() + " | " + Position.MIDDLE_RIGHT.getOccupyingPlayer());
+        System.out.println("-----------");
+        System.out.println(" " + Position.BOTTOM_LEFT.getOccupyingPlayer() + " | " + Position.BOTTOM_CENTER.getOccupyingPlayer() + " | " + Position.BOTTOM_RIGHT.getOccupyingPlayer());
     }
 
     /**
