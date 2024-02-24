@@ -73,7 +73,11 @@ public enum Position
      */
     public void setOccupyingPlayer(char occupyingPlayer)
     {
-        this.occupyingPlayer = occupyingPlayer;
+        if (this != INVALID_POSITION)
+        {
+            this.occupyingPlayer = occupyingPlayer;
+        }
+        
     }
 
     /**
