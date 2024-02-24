@@ -18,13 +18,9 @@ public class TicTacToe
 
     private static final int MAXIMUM_NUM_OF_MOVES = 9;
 
-    private static final char EMPTY_POSITION = '\u0000';
-
     private static final WinCondtion[] WIN_CONDITIONS = WinCondtion.values();
 
     private static final Position[] POSITIONS = Position.values();
-
-    private static char[][] gameBoard;
 
     private LinkedList<Position> playerMoves;
 
@@ -58,7 +54,6 @@ public class TicTacToe
     public TicTacToe(Scanner scanner, Random random)
     {
         moveCollector = scanner;
-        gameBoard = new char[ROWS][COLUMNS];
         playerMoves = new LinkedList<>();
         opponentMoves = new LinkedList<>();
         this.random = random;
