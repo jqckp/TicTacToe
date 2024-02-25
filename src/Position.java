@@ -44,7 +44,7 @@ public enum Position
      * Gets row of position.
      * @return - row of position.
      */
-    public int getRow()
+    protected int getRow()
     {
         return row;
     }
@@ -53,7 +53,7 @@ public enum Position
      * Gets column of position.
      * @return - column of position.
      */
-    public int getColumn()
+    protected int getColumn()
     {
         return column;
     }
@@ -62,7 +62,7 @@ public enum Position
      * Gets the player that is occupying specified spot.
      * @return - occupyingPlayer
      */
-    public char getOccupyingPlayer()
+    protected char getOccupyingPlayer()
     {
         return occupyingPlayer;
     }
@@ -71,7 +71,7 @@ public enum Position
      * Updates the player occupying specified spot.
      * @param occupyingPlayer - which player?
      */
-    public void setOccupyingPlayer(char occupyingPlayer)
+    protected void setOccupyingPlayer(char occupyingPlayer)
     {
         if (this != INVALID_POSITION)
         {
@@ -84,7 +84,7 @@ public enum Position
      * Gets state of spot availability.
      * @return - spot availability.
      */
-    public boolean isTaken()
+    protected boolean isTaken()
     {
         return taken;
     }
@@ -93,7 +93,7 @@ public enum Position
      * Updates status of spot availability
      * @param taken - new availability status.
      */
-    public void setTaken(boolean taken)
+    protected void setTaken(boolean taken)
     {
         if (this != INVALID_POSITION)
         {

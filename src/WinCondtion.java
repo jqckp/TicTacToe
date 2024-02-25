@@ -42,7 +42,7 @@ public enum WinCondtion
      * Gets first position of win condition.
      * @return - Position one.
      */
-    public Position getPosOne()
+    protected Position getPosOne()
     {
         return posOne;
     }
@@ -51,7 +51,7 @@ public enum WinCondtion
      * Gets second position of win condition.
      * @return - Position two.
      */
-    public Position getPosTwo()
+    protected Position getPosTwo()
     {
         return posTwo;
     }
@@ -60,7 +60,7 @@ public enum WinCondtion
      * Gets third position of win condition.
      * @return - Position three.
      */
-    public Position getPosThree()
+    protected Position getPosThree()
     {
         return posThree;
     }
@@ -69,7 +69,7 @@ public enum WinCondtion
      * Gets all positions of specified win condition.
      * @return - List of all positions that define specified win condition.
      */
-    public List<Position> getPositions()
+    protected List<Position> getPositions()
     {
         if (positions == null)
         {
