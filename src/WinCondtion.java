@@ -8,7 +8,7 @@ import java.util.List;
  * @author - Jack Porter
  * @version - 2/12/2024
  */
-public enum WinCondtion 
+enum WinCondtion 
 {
     TOP_HORIZONTAL(Position.TOP_LEFT, Position.TOP_CENTER, Position.TOP_RIGHT),
     MIDDLE_HORIZONTAL(Position.MIDDLE_LEFT, Position.CENTER, Position.MIDDLE_RIGHT),

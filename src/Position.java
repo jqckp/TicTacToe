@@ -7,7 +7,7 @@ package src;
  * @author - Jack Porter
  * @version - 2/12/2024
  */
-public enum Position 
+enum Position 
 {
     TOP_LEFT(0,0, false, ' '),
     TOP_CENTER(0,1, false, ' '),
