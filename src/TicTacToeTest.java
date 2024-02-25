@@ -24,4 +24,16 @@ public class TicTacToeTest
             new LinkedList<>(), playerMarker));
 
     }
+
+
+    @Test
+    public void testInvalidPlayerMoveSelection()
+    {
+        int playerRowChoice = 4;
+        int playerColumnChoice = 3;
+        char playerMarker = 'x';
+
+        assertFalse(game.positionAvailable(playerRowChoice, playerColumnChoice, 
+        new LinkedList<>(), playerMarker));
+    }
 }
