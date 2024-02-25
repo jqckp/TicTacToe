@@ -75,7 +75,7 @@ public class TicTacToe
      * 
      * @return - True indicating a valid move, false indicating an invalid move.
      */
-    private boolean positionAvailable(int selectedRow, int selectedColumn,
+    protected boolean positionAvailable(int selectedRow, int selectedColumn,
          LinkedList<Position> moves, char marker)
     {
         //Default position set to invalid.
@@ -105,7 +105,7 @@ public class TicTacToe
     /**
      * Prints the game board to the terminal.
      */
-    private void printGameBoard()
+    protected void printGameBoard()
     {
 
         Iterator<Position> itr = POSITIONS.iterator();
@@ -126,7 +126,7 @@ public class TicTacToe
      * enters in a string that can't be parsed to an integer. Row and column choices 
      * are validated through positionAvailable.
      */
-    private void collectPlayerMove()
+    protected void collectPlayerMove()
     {
         selectedRow = -1;
         selectedColumn = -1;
@@ -160,7 +160,7 @@ public class TicTacToe
      * 
      * Row and column numbers randomly generated are between 0 and 2 inclusive.
      */
-    private void generateOpponentMove()
+    protected void generateOpponentMove()
     {
         do
         {
@@ -185,7 +185,7 @@ public class TicTacToe
      * 
      * @param moves - All claimed positions by that specific player.
      */
-    private void checkGameOver(LinkedList<Position> moves)
+    protected void checkGameOver(LinkedList<Position> moves)
     {
         if (!(totalMoveCount >= MIN_COMBINED_MOVES_TO_WIN))
         {
@@ -252,7 +252,7 @@ public class TicTacToe
     /**
      * All steps for one turn of player.
      */
-    private void executePlayerTurn()
+    protected void executePlayerTurn()
     {
         collectPlayerMove();
         checkGameOver(playerMoves);
@@ -262,7 +262,7 @@ public class TicTacToe
     /**
      * All steps for one turn of opponent.
      */
-    private void executeOpponentTurn()
+    protected void executeOpponentTurn()
     {
         generateOpponentMove();
         checkGameOver(opponentMoves);
